@@ -382,6 +382,13 @@ for _, v in pairs({a, b, c ,d, e, f, g, h, j, k
 }) do
    v:SetVertexColor(.35, .35, .35)
 end
+--MerchantPortrait
+for i,v in pairs({
+      MerchantFramePortrait
+	  
+}) do
+   v:SetVertexColor(1, 1, 1)
+end	
 
 --PETPAPERDOLL/PET Frame
 local a, b, c, d, _, e = PetPaperDollFrame:GetRegions()
@@ -391,4 +398,6 @@ for _, v in pairs({a, b, c, d, e
    v:SetVertexColor(.35, .35, .35)
    
 end 
+
+
  
