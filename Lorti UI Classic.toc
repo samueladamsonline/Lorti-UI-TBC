@@ -1,0 +1,12 @@
+## Interface: 11302
+## Author: Lorti, Chordsy
+## Version: 1.1.0
+## Title: Lorti UI Classic
+## Notes: Darkens the default UI. Updated for Classic by Chordsy
+
+config.lua
+core\frames.lua
+core\buffs.lua
+core\actionbars.lua
+core\auras.lua
+core\minimap.lua
