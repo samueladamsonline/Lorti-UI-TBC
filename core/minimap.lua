@@ -1,20 +1,13 @@
 
-    local modZoom = function()
-        if not arg1 then return end
-        if arg1 > 0 and Minimap:GetZoom() < 5 then
-            Minimap:SetZoom(Minimap:GetZoom() + 1)
-        elseif arg1 < 0 and Minimap:GetZoom() > 0 then
-            Minimap:SetZoom(Minimap:GetZoom() - 1)
-        end
+Minimap:EnableMouseWheel(true)
+Minimap:SetScript("OnMouseWheel", function(mp, input)
+local zoom = Minimap:GetZoom()
+    if input > 0 and zoom < 5 then
+		mp:SetZoom(zoom +1)
+    elseif input < 0 and zoom > 0 then
+		mp:SetZoom(zoom -1)
     end
-	
-
-    local f = CreateFrame('Frame', nil, Minimap)
-    f:EnableMouse(false)
-    f:SetPoint('TOPLEFT', Minimap)
-    f:SetPoint('BOTTOMRIGHT', Minimap)
-    f:EnableMouseWheel(true)
-    f:SetScript('OnMouseWheel', modZoom)
+end)
 
 
 
