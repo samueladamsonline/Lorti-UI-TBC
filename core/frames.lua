@@ -261,8 +261,9 @@ for i,v in pairs({
 }) do
    v:SetVertexColor(.05, .05, .05)
    end
- -- RECOLOR LOOT WINDOW
- for i,v in pairs({
+ -- RECOLOR LOOT WINDOW AND BAGS
+ for i,v in pairs({	
+--LOOT FRAME	
       LootFrameBg,
 	  LootFrameRightBorder,
       LootFrameLeftBorder,
@@ -281,7 +282,27 @@ for i,v in pairs({
       LootFrameInsetInsetTopBorder,
       LootFrameInsetInsetBottomBorder,
 	  LootFramePortraitFrame,
+--EACH BAG
 	  ContainerFrame1BackgroundTop,
+	  ContainerFrame1BackgroundMiddle1,
+	  ContainerFrame1BackgroundBottom,
+	  
+	  ContainerFrame2BackgroundTop,
+	  ContainerFrame2BackgroundMiddle1,
+	  ContainerFrame2BackgroundBottom,
+	  
+	  ContainerFrame3BackgroundTop,
+	  ContainerFrame3BackgroundMiddle1,
+	  ContainerFrame3BackgroundBottom,
+	  
+	  ContainerFrame4BackgroundTop,
+	  ContainerFrame4BackgroundMiddle1,
+	  ContainerFrame4BackgroundBottom,
+	  
+	  ContainerFrame5BackgroundTop,
+	  ContainerFrame5BackgroundMiddle1,
+	  ContainerFrame5BackgroundBottom,
+
 }) do
    v:SetVertexColor(.35, .35, .35)
 end
@@ -289,6 +310,7 @@ end
 for i,v in pairs({
       LootFrameInsetBg,
       LootFrameTitleBg,
+	  
 }) do
    v:SetVertexColor(.05, .05, .05)
 end		
