@@ -13,7 +13,7 @@ local classColor = RAID_CLASS_COLORS[select(2, UnitClass("player"))]
 --backdrop
 local backdrop = {
 	bgFile = nil,
-	edgeFile = "Interface\\AddOns\\LortiUI Classic\\textures\\outer_shadow",
+	edgeFile = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\outer_shadow",
 	tile = false,
 	tileSize = 32,
 	edgeSize = 4,

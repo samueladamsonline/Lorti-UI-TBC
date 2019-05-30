@@ -81,13 +81,13 @@
 			self.manabar.RightText:Hide();
 			forceNormalTexture = true;
 		elseif ( classification == "worldboss" or classification == "elite" ) then
-			self.borderTexture:SetTexture("Interface\\AddOns\\Lorti UI Classic\\textures\\target\\elite")
+			self.borderTexture:SetTexture("Interface\\AddOns\\Lorti-UI-Classic\\textures\\target\\elite")
 			self.borderTexture:SetVertexColor(1, 1, 1)
 		elseif ( classification == "rareelite" ) then
-			self.borderTexture:SetTexture("Interface\\AddOns\\Lorti UI Classic\\textures\\target\\rare-elite")
+			self.borderTexture:SetTexture("Interface\\AddOns\\Lorti-UI-Classic\\textures\\target\\rare-elite")
 			self.borderTexture:SetVertexColor(1, 1, 1)
 		elseif ( classification == "rare" ) then
-			self.borderTexture:SetTexture("Interface\\AddOns\\Lorti UI Classic\\textures\\target\\rare")
+			self.borderTexture:SetTexture("Interface\\AddOns\\Lorti-UI-Classic\\textures\\target\\rare")
 			self.borderTexture:SetVertexColor(1, 1, 1)
 		else
 			self.borderTexture:SetTexture("Interface\\TargetingFrame\\UI-TargetingFrame")
@@ -181,7 +181,7 @@
 					region:SetVertexColor(.05, .05, .05)
 				end
 			end
-			CompactRaidFrameManagerToggleButton:SetNormalTexture("Interface\\AddOns\\Lorti UI Classic\\textures\\raid\\RaidPanel-Toggle")
+			CompactRaidFrameManagerToggleButton:SetNormalTexture("Interface\\AddOns\\Lorti-UI-Classic\\textures\\raid\\RaidPanel-Toggle")
 			
 			hooksecurefunc("GameTooltip_ShowCompareItem", function(self, anchorFrame)
 				if self then
@@ -399,5 +399,17 @@ for _, v in pairs({a, b, c, d, e
    
 end 
 
+-- SPELLBOOK
+local _, a, b, c, d = SpellBookFrame:GetRegions()
+for _, v in pairs({a, b, c, d}) do
+     v:SetVertexColor(.35, .35, .35)
+end
+
+ SpellBookFrame.Material = SpellBookFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
+ SpellBookFrame.Material:SetTexture[[Interface\AddOns\Lorti-UI-Classic\textures\quest\QuestBG.tga]]
+ SpellBookFrame.Material:SetWidth(547)
+ SpellBookFrame.Material:SetHeight(542)
+ SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
+ SpellBookFrame.Material:SetVertexColor(.7, .7, .7)
 
  
