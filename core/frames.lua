@@ -292,3 +292,58 @@ for i,v in pairs({
 }) do
    v:SetVertexColor(.05, .05, .05)
 end		
+
+--ClassColor on the Unitframes
+
+local ClassColorUnits = {
+["target"] = {
+   ["name"] = "TargetFrame",
+   ["back"] = "TargetFrame",
+   ["x-offset"] = -104,
+   ["y-offset"] = 60,
+   ["x-offset2"] = 6,
+   ["y-offset2"] = -22,
+},
+["player"] = {
+   ["name"] = "PlayerFrame",
+   ["back"] = "PlayerFrameBackground",
+   ["x-offset"] = 0,
+   ["y-offset"] = 22,
+   ["x-offset2"] = 0,
+   ["y-offset2"] = 0,
+},
+
+
+}
+local function updateClassColor(unit)
+   if(unit and UnitExists(unit)) then
+      local _,class = UnitClass(unit)
+      if(class and RAID_CLASS_COLORS[class]) then
+         if(ClassColorUnits[unit]) then
+            local uf = _G[ClassColorUnits[unit]['name']]
+            local bg = _G[ClassColorUnits[unit]['back']]
+            if(not uf['unitClassColorBack']) then
+               uf['unitClassColorBack'] = uf:CreateTexture(nil, "ARTWORK")
+               uf['unitClassColorBack']:SetPoint("TOPLEFT", bg, ClassColorUnits[unit]['x-offset2'], ClassColorUnits[unit]['y-offset2'])
+               uf['unitClassColorBack']:SetPoint("BOTTOMRIGHT", bg, ClassColorUnits[unit]['x-offset'], ClassColorUnits[unit]['y-offset'])
+               uf['unitClassColorBack']:SetTexture("Interface\\TargetingFrame\\UI-StatusBar")
+            end
+            local col = RAID_CLASS_COLORS[class]
+            uf['unitClassColorBack']:SetVertexColor(col['r'], col['g'], col['b'])
+         end
+      end
+   end
+end
+
+local frame = CreateFrame("Frame")
+frame:RegisterEvent("PLAYER_TARGET_CHANGED")
+frame:RegisterEvent("PLAYER_ENTERING_WORLD")
+frame:SetScript("OnEvent", function(self, event)
+      if(event=="PLAYER_TARGET_CHANGED") then
+         updateClassColor('target')
+      elseif(event=="PLAYER_ENTERING_WORLD") then
+         updateClassColor('player')
+         self:UnregisterEvent(event)
+      end
+end)
+
