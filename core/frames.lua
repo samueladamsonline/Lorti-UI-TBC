@@ -3,6 +3,9 @@
   --get the config values
   local cfg = ns.cfg
   local dragFrameList = ns.dragFrameList
+  
+  -- v:SetVertexColor(.35, .35, .35) GREY	
+  -- v:SetVertexColor(.05, .05, .05) DARKEST
 
   ---------------------------------------
   -- ACTIONS
@@ -261,7 +264,7 @@ for i,v in pairs({
 }) do
    v:SetVertexColor(.05, .05, .05)
    end
- -- RECOLOR LOOT WINDOW AND BAGS
+   
  for i,v in pairs({	
 --LOOT FRAME	
       LootFrameBg,
@@ -302,18 +305,90 @@ for i,v in pairs({
 	  ContainerFrame5BackgroundTop,
 	  ContainerFrame5BackgroundMiddle1,
 	  ContainerFrame5BackgroundBottom,
+	  
+--Frames that's not colored for some reason
+	  MerchantFrameTopBorder,
+	  MerchantFrameBtnCornerRight,
+	  MerchantFrameBtnCornerLeft,
+	  MerchantFrameBottomRightBorder,  
+	  MerchantFrameBottomLeftBorder,
+	  MerchantFrameButtonBottomBorder,
+	  MerchantFrameBg,
+
 
 }) do
    v:SetVertexColor(.35, .35, .35)
 end
 
+--Darker color stuff
 for i,v in pairs({
       LootFrameInsetBg,
       LootFrameTitleBg,
+	  MerchantFrameTitleBg,
 	  
 }) do
    v:SetVertexColor(.05, .05, .05)
 end		
 
+--PAPERDOLL/Characterframe
+local a, b, c, d, _, e = PaperDollFrame:GetRegions()
+for _, v in pairs({a, b, c, d, e
 
+})do
+   v:SetVertexColor(.35, .35, .35)
+   
+end 
 
+--Spellbook
+local _, a, b, c, d = SpellBookFrame:GetRegions()
+for _, v in pairs({a, b, c, d
+
+}) do
+    v:SetVertexColor(.35, .35, .35)
+end	
+
+-- Skilltab
+local a, b, c, d = SkillFrame:GetRegions()
+for _, v in pairs({a, b, c ,d
+
+}) do
+     v:SetVertexColor(.35, .35, .35)
+end
+for _, v in pairs({ReputationDetailCorner, ReputationDetailDivider
+
+}) do
+     v:SetVertexColor(.35, .35, .35)
+end	
+--Reputation Frame
+local a, b, c, d = ReputationFrame:GetRegions()
+for _, v in pairs({a, b, c, d
+
+}) do
+     v:SetVertexColor(.35, .35, .35)
+end
+
+-- HONOR
+local a, b, c, d = HonorFrame:GetRegions()
+for _, v in pairs({a, b, c, d
+
+}) do
+   v:SetVertexColor(.35, .35, .35)
+end
+
+-- MERCHANT
+local _, a, b, c, d, _, _, _, e, f, g, h, j, k = MerchantFrame:GetRegions()
+for _, v in pairs({a, b, c ,d, e, f, g, h, j, k
+
+}) do
+   v:SetVertexColor(.35, .35, .35)
+end
+
+--PETPAPERDOLL/PET Frame
+local a, b, c, d, _, e = PetPaperDollFrame:GetRegions()
+for _, v in pairs({a, b, c, d, e
+
+})do
+   v:SetVertexColor(.35, .35, .35)
+   
+end 
+ 
