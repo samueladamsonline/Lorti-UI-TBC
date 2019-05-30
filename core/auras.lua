@@ -13,7 +13,7 @@ local classColor = RAID_CLASS_COLORS[select(2, UnitClass("player"))]
 --backdrop
 local backdrop = {
 	bgFile = nil,
-	edgeFile = "Interface\\AddOns\\Lorti UI Classic\\textures\\outer_shadow",
+	edgeFile = "Interface\\AddOns\\LortiUI Classic\\textures\\outer_shadow",
 	tile = false,
 	tileSize = 32,
 	edgeSize = 4,
@@ -46,7 +46,7 @@ local function applySkin(b)
 	b.icon = icon
 	--border
 	local border = _G[name.."Border"] or b:CreateTexture(name.."Border", "BACKGROUND", nil, -7)
-	border:SetTexture("Interface\\AddOns\\Lorti UI Classic\\textures\\gloss")
+	border:SetTexture("Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss")
 	border:SetTexCoord(0, 1, 0, 1)
 	border:SetDrawLayer("BACKGROUND",- 7)
 	if b.buff then
@@ -82,7 +82,7 @@ local function applycastSkin(b)
     	b:SetTexCoord(0.1, 0.9, 0.1, 0.9)
     	--border
     	local border = frame:CreateTexture(nil, "BACKGROUND")
-    	border:SetTexture("Interface\\AddOns\\Lorti UI Classic\\textures\\gloss")
+    	border:SetTexture("Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss")
     	border:SetTexCoord(0, 1, 0, 1)
     	border:SetDrawLayer("BACKGROUND",- 7)
 	border:SetVertexColor(0.4, 0.35, 0.35)
