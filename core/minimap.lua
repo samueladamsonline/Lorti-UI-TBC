@@ -32,6 +32,7 @@ end)
 	
 	local frame = CreateFrame("Button", "Clock", UIParent)
 frame:ClearAllPoints()
+frame:SetFrameStrata("LOW")
 frame:SetWidth(165)
 frame:SetHeight(45)
 frame:SetPoint('BOTTOM', Minimap, 0, -30)
