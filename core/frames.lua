@@ -408,8 +408,8 @@ end
  SpellBookFrame.Material = SpellBookFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
  SpellBookFrame.Material:SetTexture[[Interface\AddOns\Lorti-UI-Classic\textures\quest\QuestBG.tga]]
  SpellBookFrame.Material:SetWidth(547)
- SpellBookFrame.Material:SetHeight(542)
+ SpellBookFrame.Material:SetHeight(541)
  SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
- SpellBookFrame.Material:SetVertexColor(.7, .7, .7)
+ SpellBookFrame.Material:SetVertexColor(.5, .5, .5)
 
  
