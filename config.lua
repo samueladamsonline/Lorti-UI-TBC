@@ -19,15 +19,15 @@
 -- action bars settings
 
   cfg.textures = {
-    normal            = "Interface\\AddOns\\Lorti UI Classic\\textures\\gloss",
-    flash             = "Interface\\AddOns\\Lorti UI Classic\\textures\\flash",
-    hover             = "Interface\\AddOns\\Lorti UI Classic\\textures\\hover",
-    pushed            = "Interface\\AddOns\\Lorti UI Classic\\textures\\pushed",
-    checked           = "Interface\\AddOns\\Lorti UI Classic\\textures\\checked",
-    equipped          = "Interface\\AddOns\\Lorti UI Classic\\textures\\gloss_grey",
-    buttonback        = "Interface\\AddOns\\Lorti UI Classic\\textures\\button_background",
-    buttonbackflat    = "Interface\\AddOns\\Lorti UI Classic\\textures\\button_background_flat",
-    outer_shadow      = "Interface\\AddOns\\Lorti UI Classic\\textures\\outer_shadow",
+    normal            = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss",
+    flash             = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\flash",
+    hover             = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\hover",
+    pushed            = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\pushed",
+    checked           = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\checked",
+    equipped          = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss_grey",
+    buttonback        = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\button_background",
+    buttonbackflat    = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\button_background_flat",
+    outer_shadow      = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\outer_shadow",
   }
 
   cfg.background = {
@@ -98,13 +98,13 @@
       padding           = -2,
     },
     border = {
-      texture           = "Interface\\AddOns\\Lorti UI Classic\\textures\\gloss",
+      texture           = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss",
       color             = { r = 0.4, g = 0.35, b = 0.35, },
       classcolored      = false,
     },
     background = {
       show              = true,   --show backdrop
-      edgeFile          = "Interface\\AddOns\\Lorti UI Classic\\textures\\outer_shadow",
+      edgeFile          = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\outer_shadow",
       color             = { r = 0, g = 0, b = 0, a = 0.9},
       classcolored      = false,
       inset             = 6,
@@ -137,13 +137,13 @@
       padding           = -2,
     },
     border = {
-      texture           = "Interface\\AddOns\\Lorti UI Classic\\textures\\gloss",
+      texture           = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss",
       color             = { r = 0.4, g = 0.35, b = 0.35, },
       classcolored      = false,
     },
     background = {
       show              = true,   --show backdrop
-      edgeFile          = "Interface\\AddOns\\Lorti UI Classic\\textures\\outer_shadow",
+      edgeFile          = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\outer_shadow",
       color             = { r = 0, g = 0, b = 0, a = 0.9},
       classcolored      = false,
       inset             = 6,
