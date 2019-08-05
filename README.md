@@ -1,6 +1,16 @@
 # Lorti UI Classic. 
 
-**IMPORTANT** Always make sure you have the latest version. The beta is constantly updated and i try to fix things ASAP **IMPORTANT**
+**IMPORTANT** 
+Always make sure you have the latest version. The beta is constantly updated and i try to fix things ASAP.
+UI elements might be changed from the beta/stresstest to the actual release. So you might get LUA errors.
+
+
+Some parts of the UI might not be colored correctly because of: 
+
+- A bug in my code 
+- I havent gotten around to it yet
+- I dont know how to do it.
+
 
 Updated for Classic WoW. This addon DOES NOT work on vanilla private servers.
 
