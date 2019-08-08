@@ -1,21 +1,11 @@
 # Lorti UI Classic. 
 
-**IMPORTANT** 
-Always make sure you have the latest version. The beta is constantly updated and i try to fix things ASAP.
-UI elements might be changed from the beta/stresstest to the actual release. So you might get LUA errors.
+I'm going to abandon this project. I dont have the time or will to keep this maintained. There are other addons out there that do the same thing, but are coded and maintained better than this.
 
+**IF ANYONE WANTS TO TAKE OVER THIS PROJECT, PM ME ON DISCORD AND WE'LL SORT IT OUT**
 
-Some parts of the UI might not be colored correctly because of: 
+Discord: Chordsy#8773
 
-- A bug in my code 
-- I havent gotten around to it yet
-- I dont know how to do it.
-
-
-Updated for Classic WoW. This addon DOES NOT work on vanilla private servers.
-
-Still a work in progress! 
-
-If you find any bugs add me on discord, Chordsy#8773 or add a new "Issue" here on Github. Screenshots of your issues are VERY appreciated!
-
-Only remove the "-master" after the folder name. Leave the other dashes.
+Below are some other addons that do pretty much the same thing.
+- https://github.com/obble/modui_classic
+- https://www.wowinterface.com/downloads/info25026-AbyssUIClassic.html
