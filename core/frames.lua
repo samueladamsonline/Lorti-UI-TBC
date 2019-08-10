@@ -3,8 +3,8 @@
   --get the config values
   local cfg = ns.cfg
   local dragFrameList = ns.dragFrameList
-  
-  -- v:SetVertexColor(.35, .35, .35) GREY	
+
+  -- v:SetVertexColor(.35, .35, .35) GREY
   -- v:SetVertexColor(.05, .05, .05) DARKEST
 
   ---------------------------------------
@@ -12,7 +12,7 @@
   ---------------------------------------
 
   -- REMOVING UGLY PARTS OF UI
-  
+
 	local event_frame = CreateFrame('Frame')
 	local errormessage_blocks = {
 	  'Способность пока недоступна',
@@ -61,13 +61,13 @@
 	end
 	event_frame:SetScript('OnEvent', onevent)
 	event_frame:RegisterEvent('PLAYER_LOGIN')
-	
+
 
   -- COLORING FRAMES
 	local CF=CreateFrame("Frame")
 	CF:RegisterEvent("PLAYER_ENTERING_WORLD")
 	CF:RegisterEvent("GROUP_ROSTER_UPDATE")
-	
+
 	hooksecurefunc('TargetFrame_CheckClassification', function(self, forceNormalTexture)
 		 local classification = UnitClassification(self.unit);
 		if ( classification == "minus" ) then
@@ -94,7 +94,7 @@
 			self.borderTexture:SetVertexColor(.05, .05, .05)
 		end
 	end)
-	
+
 	function ColorRaid()
 		for g = 1, NUM_RAID_GROUPS do
 			local group = _G["CompactRaidGroup"..g.."BorderFrame"]
@@ -132,7 +132,7 @@
 			end
 		end
 	end
-	
+
 	CF:SetScript("OnEvent", function(self, event)
 		ColorRaid()
 		CF:SetScript("OnUpdate", function()
@@ -170,7 +170,7 @@
                  		v:SetVertexColor(.05, .05, .05)
 			end
 
-		
+
 			for _, region in pairs({CompactRaidFrameManager:GetRegions()}) do
 				if region:IsObjectType("Texture") then
 					region:SetVertexColor(.05, .05, .05)
@@ -182,7 +182,7 @@
 				end
 			end
 			CompactRaidFrameManagerToggleButton:SetNormalTexture("Interface\\AddOns\\Lorti-UI-Classic\\textures\\raid\\RaidPanel-Toggle")
-			
+
 			hooksecurefunc("GameTooltip_ShowCompareItem", function(self, anchorFrame)
 				if self then
 					local shoppingTooltip1, shoppingTooltip2 = unpack(self.shoppingTooltips)
@@ -190,33 +190,33 @@
 					shoppingTooltip2:SetBackdropBorderColor(.05, .05, .05)
 				end
 			end)
-			
-			
+
+
 			GameTooltip:SetBackdropBorderColor(.05, .05, .05)
 			GameTooltip.SetBackdropBorderColor = function() end
-			
+
 			for i,v in pairs({
 				PlayerPVPIcon,
 				TargetFrameTextureFramePVPIcon,
 			}) do
 				v:SetAlpha(0)
 			end
-			for i=1,4 do 
+			for i=1,4 do
 				_G["PartyMemberFrame"..i.."PVPIcon"]:SetAlpha(0)
 				_G["PartyMemberFrame"..i.."NotPresentIcon"]:Hide()
 				_G["PartyMemberFrame"..i.."NotPresentIcon"].Show = function() end
 			end
 			PlayerFrameGroupIndicator:SetAlpha(0)
-			PlayerHitIndicator:SetText(nil) 
+			PlayerHitIndicator:SetText(nil)
 			PlayerHitIndicator.SetText = function() end
-			PetHitIndicator:SetText(nil) 
+			PetHitIndicator:SetText(nil)
 			PetHitIndicator.SetText = function() end
 
 		else
-			CastingBarFrameBorder:SetVertexColor(.05,.05,.05)    
+			CastingBarFrameBorder:SetVertexColor(.05,.05,.05)
 		end
 	end)
-   
+
  -- COLORING THE MAIN BAR
 for i,v in pairs({
       SlidingActionBarTexture0,
@@ -226,7 +226,7 @@ for i,v in pairs({
       MainMenuBarTexture2,
       MainMenuBarTexture3,
       MainMenuMaxLevelBar0,
-      MainMenuMaxLevelBar1, 
+      MainMenuMaxLevelBar1,
       MainMenuMaxLevelBar2,
       MainMenuMaxLevelBar3,
 	  MainMenuXPBarTexture0,
@@ -240,22 +240,31 @@ for i,v in pairs({
       ReputationWatchBar.StatusBar.WatchBarTexture3,
 
 }) do
-   
-   v:SetVertexColor(.2, .2, .2)
-   
-end 
 
- -- RECOLOR GRYPHONS    
+   v:SetVertexColor(.2, .2, .2)
+
+end
+
+if IsAddOnLoaded("BattleForAzerothUI") then
+    for i,v in pairs({
+        ActionBarArtSmallTexture,
+        MicroMenuArtTexture,
+    }) do
+        v:SetVertexColor(.2, .2, .2)
+    end
+end
+
+ -- RECOLOR GRYPHONS
 for i,v in pairs({
       MainMenuBarLeftEndCap,
-      MainMenuBarRightEndCap, 
+      MainMenuBarRightEndCap,
       StanceBarLeft,
       StanceBarMiddle,
       StanceBarRight,
 
 }) do
    v:SetVertexColor(.35, .35, .35)
-end 
+end
  -- RECOLOR MINIMAP
 for i,v in pairs({
       MinimapBorder,
@@ -264,9 +273,9 @@ for i,v in pairs({
 }) do
    v:SetVertexColor(.05, .05, .05)
    end
-   
- for i,v in pairs({	
---LOOT FRAME	
+
+ for i,v in pairs({
+--LOOT FRAME
       LootFrameBg,
 	  LootFrameRightBorder,
       LootFrameLeftBorder,
@@ -289,28 +298,28 @@ for i,v in pairs({
 	  ContainerFrame1BackgroundTop,
 	  ContainerFrame1BackgroundMiddle1,
 	  ContainerFrame1BackgroundBottom,
-	  
+
 	  ContainerFrame2BackgroundTop,
 	  ContainerFrame2BackgroundMiddle1,
 	  ContainerFrame2BackgroundBottom,
-	  
+
 	  ContainerFrame3BackgroundTop,
 	  ContainerFrame3BackgroundMiddle1,
 	  ContainerFrame3BackgroundBottom,
-	  
+
 	  ContainerFrame4BackgroundTop,
 	  ContainerFrame4BackgroundMiddle1,
 	  ContainerFrame4BackgroundBottom,
-	  
+
 	  ContainerFrame5BackgroundTop,
 	  ContainerFrame5BackgroundMiddle1,
 	  ContainerFrame5BackgroundBottom,
-	  
+
 --Frames that's not colored for some reason
 	  MerchantFrameTopBorder,
 	  MerchantFrameBtnCornerRight,
 	  MerchantFrameBtnCornerLeft,
-	  MerchantFrameBottomRightBorder,  
+	  MerchantFrameBottomRightBorder,
 	  MerchantFrameBottomLeftBorder,
 	  MerchantFrameButtonBottomBorder,
 	  MerchantFrameBg,
@@ -325,10 +334,10 @@ for i,v in pairs({
       LootFrameInsetBg,
       LootFrameTitleBg,
 	  MerchantFrameTitleBg,
-	  
+
 }) do
    v:SetVertexColor(.05, .05, .05)
-end		
+end
 
 --PAPERDOLL/Characterframe
 local a, b, c, d, _, e = PaperDollFrame:GetRegions()
@@ -336,8 +345,8 @@ for _, v in pairs({a, b, c, d, e
 
 })do
    v:SetVertexColor(.35, .35, .35)
-   
-end 
+
+end
 
 --Spellbook
 local _, a, b, c, d = SpellBookFrame:GetRegions()
@@ -345,7 +354,7 @@ for _, v in pairs({a, b, c, d
 
 }) do
     v:SetVertexColor(.35, .35, .35)
-end	
+end
 
 -- Skilltab
 local a, b, c, d = SkillFrame:GetRegions()
@@ -358,7 +367,7 @@ for _, v in pairs({ReputationDetailCorner, ReputationDetailDivider
 
 }) do
      v:SetVertexColor(.35, .35, .35)
-end	
+end
 --Reputation Frame
 local a, b, c, d = ReputationFrame:GetRegions()
 for _, v in pairs({a, b, c, d
@@ -385,10 +394,10 @@ end
 --MerchantPortrait
 for i,v in pairs({
       MerchantFramePortrait
-	  
+
 }) do
    v:SetVertexColor(1, 1, 1)
-end	
+end
 
 --PETPAPERDOLL/PET Frame
 local a, b, c, d, _, e = PetPaperDollFrame:GetRegions()
@@ -396,8 +405,8 @@ for _, v in pairs({a, b, c, d, e
 
 })do
    v:SetVertexColor(.35, .35, .35)
-   
-end 
+
+end
 
 -- SPELLBOOK
 local _, a, b, c, d = SpellBookFrame:GetRegions()
@@ -411,5 +420,3 @@ end
  SpellBookFrame.Material:SetHeight(541)
  SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
  SpellBookFrame.Material:SetVertexColor(.5, .5, .5)
-
- 
