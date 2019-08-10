@@ -245,6 +245,15 @@ for i,v in pairs({
 
 end
 
+if IsAddOnLoaded("BattleForAzerothUI") then
+    for i,v in pairs({
+        ActionBarArtSmallTexture,
+        MicroMenuArtTexture,
+    }) do
+        v:SetVertexColor(.2, .2, .2)
+    end
+end
+
  -- RECOLOR GRYPHONS
 for i,v in pairs({
       MainMenuBarLeftEndCap,
