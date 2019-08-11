@@ -257,6 +257,21 @@ if IsAddOnLoaded("BattleForAzerothUI") then
     end
 end
 
+--RECOLOR CLOCK AND STOPWATCH
+local function OnEvent(self, event, addon)
+    if addon == "Blizzard_TimeManager" then
+        TimeManagerClockButton:GetRegions():SetVertexColor(.05, .05, .05)
+		StopwatchFrame:GetRegions():SetVertexColor(.35, .35, .35)
+		StopwatchTabFrame:GetRegions():SetVertexColor(.35, .35, .35)
+
+        self:UnregisterEvent(event)
+    end
+end
+
+local f = CreateFrame("Frame")
+f:RegisterEvent("ADDON_LOADED")
+f:SetScript("OnEvent", OnEvent)
+
  -- RECOLOR GRYPHONS
 for i,v in pairs({
       MainMenuBarLeftEndCap,
