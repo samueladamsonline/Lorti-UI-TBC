@@ -1,10 +1,14 @@
-# Lorti UI Classic. 
+# Lorti UI Classic.
 
-**IF ANYONE WANTS TO TAKE OVER THIS PROJECT, PM ME ON DISCORD AND I'LL TRANSFER THE PROJECT TO YOU**
+Darkens the default UI.
+
+Big thanks to the original creator of this UI, Lorti. This is simply updated to work with the Classic client and does not work with any other vanilla/private server client.
+https://www.curseforge.com/wow/addons/lorti_ui
+
+I feel pretty done with this, and will mostly just fix major issues if any pops up. Most frames should now be colored. Let me know if you find anything that looks weird!
+
+**IF ANYONE WANTS TO TAKE OVER THIS PROJECT AND FURTHER DEVELOP IT, PM ME ON DISCORD AND I'LL TRANSFER THE PROJECT TO YOU**
 
 Discord: Chordsy#8773
-
-I feel pretty done with this, and will mostly just fix major issues if any pops up. 
-Let me know if you have a solution to the minimap clock frame and how to colour it.
 
 Remove the "-master" when downloaded. Folder should look like this: \Interface\AddOns\Lorti-UI-Classic
