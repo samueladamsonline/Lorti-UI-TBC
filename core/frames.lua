@@ -202,7 +202,7 @@
 				PlayerPVPIcon,
 				TargetFrameTextureFramePVPIcon,
 			}) do
-				v:SetAlpha(0)
+				v:SetAlpha(0.35)
 			end
 			for i=1,4 do
 				_G["PartyMemberFrame"..i.."PVPIcon"]:SetAlpha(0)
@@ -285,9 +285,10 @@ for i,v in pairs({
 end
  -- RECOLOR MINIMAP
 for i,v in pairs({
-      MinimapBorder,
-	  MinimapBorderTop,
-      MiniMapMailBorder,
+	MinimapBorder,
+	MinimapBorderTop,
+	MiniMapMailBorder,
+	MiniMapTrackingBorder
 }) do
    v:SetVertexColor(.05, .05, .05)
    end
