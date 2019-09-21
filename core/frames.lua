@@ -332,6 +332,30 @@ for i,v in pairs({
 	  ContainerFrame5BackgroundTop,
 	  ContainerFrame5BackgroundMiddle1,
 	  ContainerFrame5BackgroundBottom,
+	
+	  ContainerFrame6BackgroundTop,
+	  ContainerFrame6BackgroundMiddle1,
+	  ContainerFrame6BackgroundBottom,
+	  
+	  ContainerFrame7BackgroundTop,
+	  ContainerFrame7BackgroundMiddle1,
+	  ContainerFrame7BackgroundBottom,
+	  
+	  ContainerFrame8BackgroundTop,
+	  ContainerFrame8BackgroundMiddle1,
+	  ContainerFrame8BackgroundBottom,
+	  
+	  ContainerFrame9BackgroundTop,
+	  ContainerFrame9BackgroundMiddle1,
+	  ContainerFrame9BackgroundBottom,
+	  
+	  ContainerFrame10BackgroundTop,
+	  ContainerFrame10BackgroundMiddle1,
+	  ContainerFrame10BackgroundBottom,
+	  
+	  ContainerFrame11BackgroundTop,
+	  ContainerFrame11BackgroundMiddle1,
+	  ContainerFrame11BackgroundBottom,
 
 --Frames that's not colored for some reason
 	  MerchantFrameTopBorder,
@@ -345,6 +369,15 @@ for i,v in pairs({
 
 }) do
    v:SetVertexColor(.35, .35, .35)
+end
+
+--BANK
+local a, b, c, d, _, e = BankFrame:GetRegions()
+for _, v in pairs({a, b, c, d, e
+
+})do
+   v:SetVertexColor(.35, .35, .35)
+
 end
 
 --Darker color stuff
@@ -438,3 +471,13 @@ end
  SpellBookFrame.Material:SetHeight(541)
  SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
  SpellBookFrame.Material:SetVertexColor(.5, .5, .5)
+
+ --THINGS THAT SHOULD REMAIN THE REGULAR COLOR
+for i,v in pairs({
+	BankPortraitTexture,
+	BankFrameTitleText,
+	MerchantFramePortrait,
+
+}) do
+   v:SetVertexColor(1, 1, 1)
+end
