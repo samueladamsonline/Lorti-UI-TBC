@@ -6,12 +6,9 @@ Big thanks to the original creator of this UI, Lorti. This is simply updated to 
 https://www.curseforge.com/wow/addons/lorti_ui
 
 
->**IMPORTANT INFO REGARDING MISSING Target-of-Target FRAME**
+>**IMPORTANT INFO REGARDING THE FUTURE OF THIS ADDON**
+I am no longer playing Classic and will not answer any questions or try fixing any issues. If you are interested in taking over this project, send me a message on Discord.
 
-I'm looking into the Target of Target frame that seems to crash for some users. Not exactly sure what's causing it but a temporary fix might be to remove everything on Line 120-139 in the \Lorti-UI-Classic\core\auras.lua file.
-This will make the buff/debuff frame of your target revert to "Standard UI" looks. 
-
-**Let me know if it works!**
 
 Discord: Chordsy#8773
 
