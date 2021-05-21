@@ -1,8 +1,8 @@
-## Interface: 11302
-## Author: Lorti, Chordsy
-## Version: 1.1.0
+## Interface: 38757
+## Author: Lorti, Chordsy, Sinope
+## Version: 2.0.0
 ## Title: Lorti UI Classic
-## Notes: Darkens the default UI. Updated for Classic by Chordsy
+## Notes: Darkens the default UI. Updated for Classic TBC by Sinope.
 
 config.lua
 core\frames.lua

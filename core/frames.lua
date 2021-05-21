@@ -429,12 +429,12 @@ for _, v in pairs({a, b, c, d
 end
 
 -- HONOR
--- local a, b, c, d = HonorFrame:GetRegions()
--- for _, v in pairs({a, b, c, d
+local a, b, c, d = PVPFrame:GetRegions()
+for _, v in pairs({a, b, c, d
 
--- }) do
---    v:SetVertexColor(.35, .35, .35)
--- end
+}) do
+   v:SetVertexColor(.35, .35, .35)
+end
 
 -- MERCHANT
 local _, a, b, c, d, _, _, _, e, f, g, h, j, k = MerchantFrame:GetRegions()
