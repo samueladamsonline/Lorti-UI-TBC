@@ -57,7 +57,7 @@ local function applySkin(b)
 	border:SetPoint("BOTTOMRIGHT", b, "BOTTOMRIGHT", 1, -1)
 	b.border = border
 	--shadow
-	local back = CreateFrame("Frame", nil, b)
+	local back = CreateFrame("Frame", nil, b, BackdropTemplateMixin and "BackdropTemplate")
 	back:SetPoint("TOPLEFT", b, "TOPLEFT", -4, 4)
 	back:SetPoint("BOTTOMRIGHT", b, "BOTTOMRIGHT", 4, -4)
 	back:SetFrameLevel(b:GetFrameLevel() - 1)
@@ -77,7 +77,7 @@ local function applycastSkin(b)
 		b.parent = TargetFrameSpellBar
 	end
 	-- frame
-	frame = CreateFrame("Frame", nil, b.parent)
+	frame = CreateFrame("Frame", nil, b.parent, BackdropTemplateMixin and "BackdropTemplate")
     	--icon
     	b:SetTexCoord(0.1, 0.9, 0.1, 0.9)
     	--border
@@ -91,7 +91,7 @@ local function applycastSkin(b)
       	border:SetPoint("BOTTOMRIGHT", b, "BOTTOMRIGHT", 1, -1)
     	b.border = border
 	--shadow
-	local back = CreateFrame("Frame", nil, b.parent)
+	local back = CreateFrame("Frame", nil, b.parent, BackdropTemplateMixin and "BackdropTemplate")
 	back:SetPoint("TOPLEFT", b, "TOPLEFT", -4, 4)
 	back:SetPoint("BOTTOMRIGHT", b, "BOTTOMRIGHT", 4, -4)
 	back:SetFrameLevel(frame:GetFrameLevel() - 1)

@@ -90,7 +90,7 @@
     userplaced      = true, --want to place the bar somewhere else?
     rowSpacing      = 10,
     colSpacing      = 7,
-    buttonsPerRow   = 10,
+    buttonsPerRow   = 16,
     button = {
       size              = 28,
     },

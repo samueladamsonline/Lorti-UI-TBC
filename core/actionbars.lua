@@ -49,7 +49,7 @@
     --shadows+background
     if bu:GetFrameLevel() < 1 then bu:SetFrameLevel(1) end
     if cfg.background.showbg or cfg.background.showshadow then
-      bu.bg = CreateFrame("Frame", nil, bu)
+      bu.bg = CreateFrame("Frame", nil, bu, BackdropTemplateMixin and "BackdropTemplate")
      -- bu.bg:SetAllPoints(bu)
       bu.bg:SetPoint("TOPLEFT", bu, "TOPLEFT", -4, 4)
       bu.bg:SetPoint("BOTTOMRIGHT", bu, "BOTTOMRIGHT", 4, -4)
@@ -311,7 +311,7 @@ local function styleBag(bu)
         		self:SetNormalTexture(cfg.textures.normal)
       		end
    	 end)
-	bu.Back = CreateFrame("Frame", nil, bu)
+	bu.Back = CreateFrame("Frame", nil, bu, BackdropTemplateMixin and "BackdropTemplate")
 		bu.Back:SetPoint("TOPLEFT", bu, "TOPLEFT", -4, 4)
 		bu.Back:SetPoint("BOTTOMRIGHT", bu, "BOTTOMRIGHT", 4, -4)
 		bu.Back:SetFrameLevel(bu:GetFrameLevel() - 1)
