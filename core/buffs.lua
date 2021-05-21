@@ -177,7 +177,7 @@
 
     --shadow
     if cfg.background.show then
-      local back = CreateFrame("Frame", nil, b)
+      local back = CreateFrame("Frame", nil, b, BackdropTemplateMixin and "BackdropTemplate")
       back:SetPoint("TOPLEFT", b, "TOPLEFT", -cfg.background.padding, cfg.background.padding)
       back:SetPoint("BOTTOMRIGHT", b, "BOTTOMRIGHT", cfg.background.padding, -cfg.background.padding)
       back:SetFrameLevel(b:GetFrameLevel() - 1)
