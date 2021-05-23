@@ -10,8 +10,8 @@ Discord: Sinope#2833
 Twitch: SinopeTV
 
 To install directory from GitHub:
-- Click Download ZIP from the Code submenu.
-- Rename the zip file from Lorti-UI-master.zip to Lorti-UI.zip.
+- Click Download ZIP from the Code submenu
+- Rename the zip file from Lorti-UI-TBC-master.zip to Lorti-UI-TBC.zip
 - Unzip to <WoW directory>/Interface/AddOns/Lorti-UI-TBC
 
 Make sure you haven't accidently nested folders. Files such as config.lua and README.md should be located at <WoW directory>/Interface/AddOns/Lorti-UI-TBC/config.lua and <WoW directory>/Interface/AddOns/Lorti-UI-TBC/README.md respectively.
