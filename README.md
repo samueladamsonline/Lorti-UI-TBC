@@ -1,12 +1,17 @@
-# Lorti UI TBC
+# Lorti UI (Burning Crusade Classic)
 
 Darkens the default UI.
 
-Big thanks to the original creator Lorti and previous maintainer Chordsy. This is simply updated to work with the Classic TBC client and does not work with any other vanilla/private server client.
+Big thanks to the original creator Lorti and previous maintainer Chordsy. This addon is updated to work with the Burning Crusade Classic client only.
 
 Original addon: https://www.curseforge.com/wow/addons/lorti_ui
 
 Discord: Sinope#2833
-Twitch: sinopetv
+Twitch: SinopeTV
 
-Remove the "-master" when downloaded. Folder should look like this: \Interface\AddOns\Lorti-UI-TBC
+To install directory from GitHub:
+- Click Download ZIP from the Code submenu.
+- Rename the zip file from Lorti-UI-master.zip to Lorti-UI.zip.
+- Unzip to <WoW directory>/Interface/AddOns/Lorti-UI-TBC
+
+Make sure you haven't accidently nested folders. Files such as config.lua and README.md should be located at <WoW directory>/Interface/AddOns/Lorti-UI-TBC/config.lua and <WoW directory>/Interface/AddOns/Lorti-UI-TBC/README.md respectively.

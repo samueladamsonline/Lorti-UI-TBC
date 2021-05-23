@@ -222,30 +222,27 @@
 
  -- COLORING THE MAIN BAR
 for i,v in pairs({
-      SlidingActionBarTexture0,
-      SlidingActionBarTexture1,
-      MainMenuBarTexture0,
-      MainMenuBarTexture1,
-      MainMenuBarTexture2,
-      MainMenuBarTexture3,
-      MainMenuMaxLevelBar0,
-      MainMenuMaxLevelBar1,
-      MainMenuMaxLevelBar2,
-      MainMenuMaxLevelBar3,
-	  MainMenuXPBarTexture0,
-      MainMenuXPBarTexture1,
-	  MainMenuXPBarTexture2,
-	  MainMenuXPBarTexture3,
-	  MainMenuXPBarTexture4,
-	  ReputationWatchBar.StatusBar.WatchBarTexture0,
-      ReputationWatchBar.StatusBar.WatchBarTexture1,
-      ReputationWatchBar.StatusBar.WatchBarTexture2,
-      ReputationWatchBar.StatusBar.WatchBarTexture3,
-
+    SlidingActionBarTexture0,
+    SlidingActionBarTexture1,
+    MainMenuBarTexture0,
+    MainMenuBarTexture1,
+    MainMenuBarTexture2,
+    MainMenuBarTexture3,
+    MainMenuMaxLevelBar0,
+    MainMenuMaxLevelBar1,
+    MainMenuMaxLevelBar2,
+    MainMenuMaxLevelBar3,
+	MainMenuXPBarTexture0,
+    MainMenuXPBarTexture1,
+	MainMenuXPBarTexture2,
+	MainMenuXPBarTexture3,
+	MainMenuXPBarTexture4,
+	ReputationWatchBar.StatusBar.WatchBarTexture0,
+    ReputationWatchBar.StatusBar.WatchBarTexture1,
+    ReputationWatchBar.StatusBar.WatchBarTexture2,
+    ReputationWatchBar.StatusBar.WatchBarTexture3,
 }) do
-
    v:SetVertexColor(.2, .2, .2)
-
 end
 
 if IsAddOnLoaded("BattleForAzerothUI") then
@@ -274,15 +271,15 @@ f:SetScript("OnEvent", OnEvent)
 
  -- RECOLOR GRYPHONS
 for i,v in pairs({
-      MainMenuBarLeftEndCap,
-      MainMenuBarRightEndCap,
-      StanceBarLeft,
-      StanceBarMiddle,
-      StanceBarRight,
-
+    MainMenuBarLeftEndCap,
+    MainMenuBarRightEndCap,
+    StanceBarLeft,
+    StanceBarMiddle,
+	StanceBarRight,
 }) do
    v:SetVertexColor(.35, .35, .35)
 end
+
  -- RECOLOR MINIMAP
 for i,v in pairs({
 	MinimapBorder,
@@ -291,194 +288,168 @@ for i,v in pairs({
 	MiniMapTrackingBorder
 }) do
    v:SetVertexColor(.05, .05, .05)
-   end
+end
 
- for i,v in pairs({
+for i,v in pairs({
 --LOOT FRAME
-      LootFrameBg,
-	  LootFrameRightBorder,
-      LootFrameLeftBorder,
-      LootFrameTopBorder,
-      LootFrameBottomBorder,
-	  LootFrameTopRightCorner,
-      LootFrameTopLeftCorner,
-      LootFrameBotRightCorner,
-      LootFrameBotLeftCorner,
-	  LootFrameInsetInsetTopRightCorner,
-	  LootFrameInsetInsetTopLeftCorner,
-	  LootFrameInsetInsetBotRightCorner,
-	  LootFrameInsetInsetBotLeftCorner,
-      LootFrameInsetInsetRightBorder,
-      LootFrameInsetInsetLeftBorder,
-      LootFrameInsetInsetTopBorder,
-      LootFrameInsetInsetBottomBorder,
-	  LootFramePortraitFrame,
+    LootFrameBg,
+	LootFrameRightBorder,
+    LootFrameLeftBorder,
+    LootFrameTopBorder,
+    LootFrameBottomBorder,
+	LootFrameTopRightCorner,
+    LootFrameTopLeftCorner,
+    LootFrameBotRightCorner,
+    LootFrameBotLeftCorner,
+	LootFrameInsetInsetTopRightCorner,
+	LootFrameInsetInsetTopLeftCorner,
+	LootFrameInsetInsetBotRightCorner,
+	LootFrameInsetInsetBotLeftCorner,
+    LootFrameInsetInsetRightBorder,
+    LootFrameInsetInsetLeftBorder,
+    LootFrameInsetInsetTopBorder,
+    LootFrameInsetInsetBottomBorder,
+	LootFramePortraitFrame,
 --EACH BAG
-	  ContainerFrame1BackgroundTop,
-	  ContainerFrame1BackgroundMiddle1,
-	  ContainerFrame1BackgroundBottom,
+	ContainerFrame1BackgroundTop,
+	ContainerFrame1BackgroundMiddle1,
+	ContainerFrame1BackgroundBottom,
 
-	  ContainerFrame2BackgroundTop,
-	  ContainerFrame2BackgroundMiddle1,
-	  ContainerFrame2BackgroundBottom,
+	ContainerFrame2BackgroundTop,
+	ContainerFrame2BackgroundMiddle1,
+	ContainerFrame2BackgroundBottom,
 
-	  ContainerFrame3BackgroundTop,
-	  ContainerFrame3BackgroundMiddle1,
-	  ContainerFrame3BackgroundBottom,
+	ContainerFrame3BackgroundTop,
+	ContainerFrame3BackgroundMiddle1,
+	ContainerFrame3BackgroundBottom,
 
-	  ContainerFrame4BackgroundTop,
-	  ContainerFrame4BackgroundMiddle1,
-	  ContainerFrame4BackgroundBottom,
+	ContainerFrame4BackgroundTop,
+	ContainerFrame4BackgroundMiddle1,
+	ContainerFrame4BackgroundBottom,
 
-	  ContainerFrame5BackgroundTop,
-	  ContainerFrame5BackgroundMiddle1,
-	  ContainerFrame5BackgroundBottom,
+	ContainerFrame5BackgroundTop,
+	ContainerFrame5BackgroundMiddle1,
+	ContainerFrame5BackgroundBottom,
 	
-	  ContainerFrame6BackgroundTop,
-	  ContainerFrame6BackgroundMiddle1,
-	  ContainerFrame6BackgroundBottom,
+	ContainerFrame6BackgroundTop,
+	ContainerFrame6BackgroundMiddle1,
+	ContainerFrame6BackgroundBottom,
 	  
-	  ContainerFrame7BackgroundTop,
-	  ContainerFrame7BackgroundMiddle1,
-	  ContainerFrame7BackgroundBottom,
+	ContainerFrame7BackgroundTop,
+	ContainerFrame7BackgroundMiddle1,
+	ContainerFrame7BackgroundBottom,
 	  
-	  ContainerFrame8BackgroundTop,
-	  ContainerFrame8BackgroundMiddle1,
-	  ContainerFrame8BackgroundBottom,
+	ContainerFrame8BackgroundTop,
+	ContainerFrame8BackgroundMiddle1,
+	ContainerFrame8BackgroundBottom,
 	  
-	  ContainerFrame9BackgroundTop,
-	  ContainerFrame9BackgroundMiddle1,
-	  ContainerFrame9BackgroundBottom,
+	ContainerFrame9BackgroundTop,
+	ContainerFrame9BackgroundMiddle1,
+	ContainerFrame9BackgroundBottom,
 	  
-	  ContainerFrame10BackgroundTop,
-	  ContainerFrame10BackgroundMiddle1,
-	  ContainerFrame10BackgroundBottom,
+	ContainerFrame10BackgroundTop,
+	ContainerFrame10BackgroundMiddle1,
+	ContainerFrame10BackgroundBottom,
 	  
-	  ContainerFrame11BackgroundTop,
-	  ContainerFrame11BackgroundMiddle1,
-	  ContainerFrame11BackgroundBottom,
+	ContainerFrame11BackgroundTop,
+	ContainerFrame11BackgroundMiddle1,
+	ContainerFrame11BackgroundBottom,
 
 --Frames that's not colored for some reason
-	  MerchantFrameTopBorder,
-	  MerchantFrameBtnCornerRight,
-	  MerchantFrameBtnCornerLeft,
-	  MerchantFrameBottomRightBorder,
-	  MerchantFrameBottomLeftBorder,
-	  MerchantFrameButtonBottomBorder,
-	  MerchantFrameBg,
-
-
+	MerchantFrameTopBorder,
+	MerchantFrameBtnCornerRight,
+	MerchantFrameBtnCornerLeft,
+	MerchantFrameBottomRightBorder,
+	MerchantFrameBottomLeftBorder,
+	MerchantFrameButtonBottomBorder,
+	MerchantFrameBg,
 }) do
    v:SetVertexColor(.35, .35, .35)
 end
 
 --BANK
 local a, b, c, d, _, e = BankFrame:GetRegions()
-for _, v in pairs({a, b, c, d, e
-
-})do
+for _, v in pairs({a, b, c, d, e}) do
    v:SetVertexColor(.35, .35, .35)
-
 end
 
 --Darker color stuff
 for i,v in pairs({
-      LootFrameInsetBg,
-      LootFrameTitleBg,
-	  MerchantFrameTitleBg,
-
+    LootFrameInsetBg,
+    LootFrameTitleBg,
+	MerchantFrameTitleBg,
 }) do
    v:SetVertexColor(.05, .05, .05)
 end
 
 --PAPERDOLL/Characterframe
 local a, b, c, d, _, e = PaperDollFrame:GetRegions()
-for _, v in pairs({a, b, c, d, e
-
-})do
+for _, v in pairs({a, b, c, d, e}) do
    v:SetVertexColor(.35, .35, .35)
-
 end
 
 --Spellbook
 local _, a, b, c, d = SpellBookFrame:GetRegions()
-for _, v in pairs({a, b, c, d
-
-}) do
-    v:SetVertexColor(.35, .35, .35)
+for _, v in pairs({a, b, c, d}) do
+	v:SetVertexColor(.35, .35, .35)
 end
 
 -- Skilltab
 local a, b, c, d = SkillFrame:GetRegions()
-for _, v in pairs({a, b, c ,d
-
-}) do
-     v:SetVertexColor(.35, .35, .35)
+for _, v in pairs({a, b, c ,d}) do
+    v:SetVertexColor(.35, .35, .35)
 end
-for _, v in pairs({ReputationDetailCorner, ReputationDetailDivider
-
-}) do
-     v:SetVertexColor(.35, .35, .35)
+for _, v in pairs({ReputationDetailCorner, ReputationDetailDivider}) do
+    v:SetVertexColor(.35, .35, .35)
 end
 --Reputation Frame
 local a, b, c, d = ReputationFrame:GetRegions()
-for _, v in pairs({a, b, c, d
-
-}) do
-     v:SetVertexColor(.35, .35, .35)
+for _, v in pairs({a, b, c, d}) do
+    v:SetVertexColor(.35, .35, .35)
 end
 
 -- HONOR
 local a, b, c, d = PVPFrame:GetRegions()
-for _, v in pairs({a, b, c, d
-
-}) do
-   v:SetVertexColor(.35, .35, .35)
+for _, v in pairs({a, b, c, d}) do
+	v:SetVertexColor(.35, .35, .35)
 end
 
 -- MERCHANT
 local _, a, b, c, d, _, _, _, e, f, g, h, j, k = MerchantFrame:GetRegions()
-for _, v in pairs({a, b, c ,d, e, f, g, h, j, k
-
-}) do
-   v:SetVertexColor(.35, .35, .35)
+for _, v in pairs({a, b, c ,d, e, f, g, h, j, k}) do
+	v:SetVertexColor(.35, .35, .35)
 end
 --MerchantPortrait
 for i,v in pairs({
-      MerchantFramePortrait
-
+    MerchantFramePortrait
 }) do
    v:SetVertexColor(1, 1, 1)
 end
 
 --PETPAPERDOLL/PET Frame
 local a, b, c, d, _, e = PetPaperDollFrame:GetRegions()
-for _, v in pairs({a, b, c, d, e
-
-})do
-   v:SetVertexColor(.35, .35, .35)
-
+for _, v in pairs({a, b, c, d, e}) do
+	v:SetVertexColor(.35, .35, .35)
 end
 
 -- SPELLBOOK
 local _, a, b, c, d = SpellBookFrame:GetRegions()
 for _, v in pairs({a, b, c, d}) do
-     v:SetVertexColor(.35, .35, .35)
+    v:SetVertexColor(.35, .35, .35)
 end
 
- SpellBookFrame.Material = SpellBookFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
- SpellBookFrame.Material:SetTexture[[Interface\AddOns\Lorti-UI-TBC\textures\quest\QuestBG.tga]]
- SpellBookFrame.Material:SetWidth(547)
- SpellBookFrame.Material:SetHeight(541)
- SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
- SpellBookFrame.Material:SetVertexColor(.5, .5, .5)
+SpellBookFrame.Material = SpellBookFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
+SpellBookFrame.Material:SetTexture[[Interface\AddOns\Lorti-UI-TBC\textures\quest\QuestBG.tga]]
+SpellBookFrame.Material:SetWidth(547)
+SpellBookFrame.Material:SetHeight(541)
+SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
+SpellBookFrame.Material:SetVertexColor(.5, .5, .5)
 
  --THINGS THAT SHOULD REMAIN THE REGULAR COLOR
 for i,v in pairs({
 	BankPortraitTexture,
 	BankFrameTitleText,
 	MerchantFramePortrait,
-
 }) do
    v:SetVertexColor(1, 1, 1)
 end
