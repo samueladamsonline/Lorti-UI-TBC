@@ -1,0 +1,12 @@
+## Interface: 38757
+## Author: Lorti, Chordsy, Sinope
+## Version: 2.0.0
+## Title: Lorti UI TBC
+## Notes: Darkens the default UI. Updated for Classic TBC by Sinope.
+
+config.lua
+core\frames.lua
+core\buffs.lua
+core\actionbars.lua
+core\auras.lua
+core\minimap.lua

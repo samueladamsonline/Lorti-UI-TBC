@@ -53,23 +53,23 @@
      -- bu.bg:SetAllPoints(bu)
       bu.bg:SetPoint("TOPLEFT", bu, "TOPLEFT", -4, 4)
       bu.bg:SetPoint("BOTTOMRIGHT", bu, "BOTTOMRIGHT", 4, -4)
-      bu.bg:SetFrameLevel(bu:GetFrameLevel()-1)
+      bu.bg:SetFrameLevel(bu:GetFrameLevel() - 1)
       if cfg.background.classcolored then
         cfg.background.backgroundcolor = classcolor
         cfg.background.shadowcolor = classcolor
       end
       if cfg.background.showbg and not cfg.background.useflatbackground then
-        local t = bu.bg:CreateTexture(nil,"BACKGROUND",-8)
+        local t = bu.bg:CreateTexture(nil, "BACKGROUND", -8)
         t:SetTexture(cfg.textures.buttonback)
         --t:SetAllPoints(bu)
-        t:SetVertexColor(cfg.background.backgroundcolor.r,cfg.background.backgroundcolor.g,cfg.background.backgroundcolor.b,cfg.background.backgroundcolor.a)
+        t:SetVertexColor(cfg.background.backgroundcolor.r, cfg.background.backgroundcolor.g, cfg.background.backgroundcolor.b, cfg.background.backgroundcolor.a)
       end
       bu.bg:SetBackdrop(backdrop)
       if cfg.background.useflatbackground then
-        bu.bg:SetBackdropColor(cfg.background.backgroundcolor.r,cfg.background.backgroundcolor.g,cfg.background.backgroundcolor.b,cfg.background.backgroundcolor.a)
+        bu.bg:SetBackdropColor(cfg.background.backgroundcolor.r, cfg.background.backgroundcolor.g, cfg.background.backgroundcolor.b, cfg.background.backgroundcolor.a)
       end
       if cfg.background.showshadow then
-        bu.bg:SetBackdropBorderColor(cfg.background.shadowcolor.r,cfg.background.shadowcolor.g,cfg.background.shadowcolor.b,cfg.background.shadowcolor.a)
+        bu.bg:SetBackdropBorderColor(cfg.background.shadowcolor.r, cfg.background.shadowcolor.g, cfg.background.shadowcolor.b, cfg.background.shadowcolor.a)
       end
     end
   end
@@ -100,23 +100,23 @@
     --hotkey
     ho:SetFont(cfg.font, cfg.hotkeys.fontsize, "OUTLINE")
     ho:ClearAllPoints()
-    ho:SetPoint(cfg.hotkeys.pos1.a1,bu,cfg.hotkeys.pos1.x,cfg.hotkeys.pos1.y)
-    ho:SetPoint(cfg.hotkeys.pos2.a1,bu,cfg.hotkeys.pos2.x,cfg.hotkeys.pos2.y)
+    ho:SetPoint(cfg.hotkeys.pos1.a1, bu, cfg.hotkeys.pos1.x, cfg.hotkeys.pos1.y)
+    ho:SetPoint(cfg.hotkeys.pos2.a1, bu, cfg.hotkeys.pos2.x, cfg.hotkeys.pos2.y)
     if not dominos and not bartender4 and not cfg.hotkeys.show then
       ho:Hide()
     end
     --macro name
     na:SetFont(cfg.font, cfg.macroname.fontsize, "OUTLINE")
     na:ClearAllPoints()
-    na:SetPoint(cfg.macroname.pos1.a1,bu,cfg.macroname.pos1.x,cfg.macroname.pos1.y)
-    na:SetPoint(cfg.macroname.pos2.a1,bu,cfg.macroname.pos2.x,cfg.macroname.pos2.y)
+    na:SetPoint(cfg.macroname.pos1.a1, bu, cfg.macroname.pos1.x, cfg.macroname.pos1.y)
+    na:SetPoint(cfg.macroname.pos2.a1, bu, cfg.macroname.pos2.x, cfg.macroname.pos2.y)
     if not dominos and not bartender4 and not cfg.macroname.show then
       na:Hide()
     end
     --item stack count
     co:SetFont(cfg.font, cfg.itemcount.fontsize, "OUTLINE")
     co:ClearAllPoints()
-    co:SetPoint(cfg.itemcount.pos1.a1,bu,cfg.itemcount.pos1.x,cfg.itemcount.pos1.y)
+    co:SetPoint(cfg.itemcount.pos1.a1, bu, cfg.itemcount.pos1.x, cfg.itemcount.pos1.y)
     if not dominos and not bartender4 and not cfg.itemcount.show then
       co:Hide()
     end
@@ -140,10 +140,10 @@
     --apply the normaltexture
     if action and  IsEquippedAction(action) then
       --bu:SetNormalTexture(cfg.textures.equipped)
-      nt:SetVertexColor(cfg.color.equipped.r,cfg.color.equipped.g,cfg.color.equipped.b,1)
+      nt:SetVertexColor(cfg.color.equipped.r, cfg.color.equipped.g, cfg.color.equipped.b, 1)
     else
       bu:SetNormalTexture(cfg.textures.normal)
-      nt:SetVertexColor(cfg.color.normal.r,cfg.color.normal.g,cfg.color.normal.b,1)
+      nt:SetVertexColor(cfg.color.normal.r, cfg.color.normal.g, cfg.color.normal.b, 1)
     end
     --make the normaltexture match the buttonsize
     nt:SetAllPoints(bu)
@@ -152,24 +152,24 @@
       local bu = nt:GetParent()
       local action = bu.action
       --print("bu"..bu:GetName().."R"..r.."G"..g.."B"..b)
-      if r==1 and g==1 and b==1 and action and (IsEquippedAction(action)) then
-        if cfg.color.equipped.r == 1 and  cfg.color.equipped.g == 1 and  cfg.color.equipped.b == 1 then
-          nt:SetVertexColor(0.999,0.999,0.999,1)
+      if r == 1 and g == 1 and b == 1 and action and (IsEquippedAction(action)) then
+        if cfg.color.equipped.r == 1 and cfg.color.equipped.g == 1 and cfg.color.equipped.b == 1 then
+          nt:SetVertexColor(0.999, 0.999, 0.999, 1)
         else
-          nt:SetVertexColor(cfg.color.equipped.r,cfg.color.equipped.g,cfg.color.equipped.b,1)
+          nt:SetVertexColor(cfg.color.equipped.r, cfg.color.equipped.g, cfg.color.equipped.b, 1)
         end
-      elseif r==0.5 and g==0.5 and b==1 then
+      elseif r == 0.5 and g == 0.5 and b == 1 then
         --blizzard oom color
-        if cfg.color.normal.r == 0.5 and  cfg.color.normal.g == 0.5 and  cfg.color.normal.b == 1 then
-          nt:SetVertexColor(0.499,0.499,0.999,1)
+        if cfg.color.normal.r == 0.5 and cfg.color.normal.g == 0.5 and cfg.color.normal.b == 1 then
+          nt:SetVertexColor(0.499, 0.499, 0.999, 1)
         else
-          nt:SetVertexColor(cfg.color.normal.r,cfg.color.normal.g,cfg.color.normal.b,1)
+          nt:SetVertexColor(cfg.color.normal.r, cfg.color.normal.g, cfg.color.normal.b, 1)
         end
-      elseif r==1 and g==1 and b==1 then
-        if cfg.color.normal.r == 1 and  cfg.color.normal.g == 1 and  cfg.color.normal.b == 1 then
-          nt:SetVertexColor(0.999,0.999,0.999,1)
+      elseif r == 1 and g == 1 and b == 1 then
+        if cfg.color.normal.r == 1 and cfg.color.normal.g == 1 and cfg.color.normal.b == 1 then
+          nt:SetVertexColor(0.999, 0.999, 0.999, 1)
         else
-          nt:SetVertexColor(cfg.color.normal.r,cfg.color.normal.g,cfg.color.normal.b,1)
+          nt:SetVertexColor(cfg.color.normal.r, cfg.color.normal.g, cfg.color.normal.b, 1)
         end
       end
     end)

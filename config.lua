@@ -1,6 +1,7 @@
 ﻿
-  -- // Lorti UI Classic
+  -- // Lorti UI TBC
   -- // Lorti - 2016
+  -- // Sinope - 2021
 
   -----------------------------
   -- INIT
@@ -19,15 +20,15 @@
 -- action bars settings
 
   cfg.textures = {
-    normal            = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss",
-    flash             = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\flash",
-    hover             = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\hover",
-    pushed            = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\pushed",
-    checked           = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\checked",
-    equipped          = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss_grey",
-    buttonback        = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\button_background",
-    buttonbackflat    = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\button_background_flat",
-    outer_shadow      = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\outer_shadow",
+    normal            = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\gloss",
+    flash             = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\flash",
+    hover             = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\hover",
+    pushed            = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\pushed",
+    checked           = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\checked",
+    equipped          = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\gloss_grey",
+    buttonback        = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\button_background",
+    buttonbackflat    = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\button_background_flat",
+    outer_shadow      = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\outer_shadow",
   }
 
   cfg.background = {
@@ -98,13 +99,13 @@
       padding           = -2,
     },
     border = {
-      texture           = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss",
+      texture           = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\gloss",
       color             = { r = 0.4, g = 0.35, b = 0.35, },
       classcolored      = false,
     },
     background = {
       show              = true,   --show backdrop
-      edgeFile          = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\outer_shadow",
+      edgeFile          = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\outer_shadow",
       color             = { r = 0, g = 0, b = 0, a = 0.9},
       classcolored      = false,
       inset             = 6,
@@ -124,12 +125,19 @@
   
 -- debuff frame settings
 
-  cfg.debuffFrame = {    pos             = { a1 = "TOPRIGHT", af = "Minimap", a2 = "TOPLEFT", x = -35, y = -85 },
-    gap             = 10, --gap between buff and debuff rows
-    userplaced      = true, --want to place the bar somewhere else?
-    rowSpacing      = 10,
-    colSpacing      = 7,
-    buttonsPerRow   = 10,
+  cfg.debuffFrame = {
+    pos = {
+      a1 = "TOPRIGHT",
+      af = "Minimap",
+      a2 = "TOPLEFT",
+      x = -35,
+      y = -85
+    },
+    gap                 = 10, --gap between buff and debuff rows
+    userplaced          = true, --want to place the bar somewhere else?
+    rowSpacing          = 10,
+    colSpacing          = 7,
+    buttonsPerRow       = 10,
     button = {
       size              = 28,
     },
@@ -137,13 +145,13 @@
       padding           = -2,
     },
     border = {
-      texture           = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\gloss",
+      texture           = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\gloss",
       color             = { r = 0.4, g = 0.35, b = 0.35, },
       classcolored      = false,
     },
     background = {
       show              = true,   --show backdrop
-      edgeFile          = "Interface\\AddOns\\Lorti-UI-Classic\\textures\\outer_shadow",
+      edgeFile          = "Interface\\AddOns\\Lorti-UI-TBC\\textures\\outer_shadow",
       color             = { r = 0, g = 0, b = 0, a = 0.9},
       classcolored      = false,
       inset             = 6,
