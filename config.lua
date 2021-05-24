@@ -1,5 +1,5 @@
 ﻿
-  -- // Lorti UI (TBC)
+  -- // Lorti UI (Burning Crusade Classic)
   -- // Lorti - 2016
   -- // Sinope - 2021
 
@@ -55,7 +55,7 @@
   }
 
   cfg.macroname = {
-    show             = false,
+    show             = true,
     fontsize         = 12,
     pos1             = { a1 = "BOTTOMLEFT", x = 0, y = 0 },
     pos2             = { a1 = "BOTTOMRIGHT", x = 0, y = 0 }, --important! two points are needed to make the macroname be inside of the button

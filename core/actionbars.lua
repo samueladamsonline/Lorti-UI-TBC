@@ -194,7 +194,7 @@
     nt:SetPoint("BOTTOMRIGHT", bu, "BOTTOMRIGHT", -2, 2)
 	bo:SetTexture(cfg.textures.normal)
 	bo:SetTexCoord(0, 1, 0, 1)
-	bo:SetDrawLayer("BACKGROUND",- 7)
+	bo:SetDrawLayer("BACKGROUND", -7)
 	bo:SetVertexColor(0.4, 0.35, 0.35)
 	bo:ClearAllPoints()
 	bo:SetAllPoints(bu)
