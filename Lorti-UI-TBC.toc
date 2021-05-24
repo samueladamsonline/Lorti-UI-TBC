@@ -2,7 +2,7 @@
 ## Author: Lorti, Chordsy, Sinope
 ## Version: 2.0.0
 ## Title: Lorti UI (Burning Crusade Classic)
-## Notes: Darkens the default UI. Updated for Classic TBC by Sinope.
+## Notes: Darkens the default UI. Updated for Burning Crusade Classic.
 
 config.lua
 core\frames.lua

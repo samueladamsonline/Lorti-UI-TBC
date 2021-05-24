@@ -81,16 +81,16 @@
     end
     local action = bu.action
     local name = bu:GetName()
-    local ic  = _G[name.."Icon"]
-    local co  = _G[name.."Count"]
-    local bo  = _G[name.."Border"]
-    local ho  = _G[name.."HotKey"]
-    local cd  = _G[name.."Cooldown"]
-    local na  = _G[name.."Name"]
-    local fl  = _G[name.."Flash"]
-    local nt  = _G[name.."NormalTexture"]
+    local ic   = _G[name.."Icon"]
+    local co   = _G[name.."Count"]
+    local bo   = _G[name.."Border"]
+    local ho   = _G[name.."HotKey"]
+    local cd   = _G[name.."Cooldown"]
+    local na   = _G[name.."Name"]
+    local fl   = _G[name.."Flash"]
+    local nt   = _G[name.."NormalTexture"]
     local fbg  = _G[name.."FloatingBG"]
-    local fob = _G[name.."FlyoutBorder"]
+    local fob  = _G[name.."FlyoutBorder"]
     local fobs = _G[name.."FlyoutBorderShadow"]
     if fbg then fbg:Hide() end  --floating background
     --flyout border stuff
