@@ -9,7 +9,7 @@ Original addon: https://www.curseforge.com/wow/addons/lorti_ui
 Discord: Sinope#2833
 Twitch: SinopeTV
 
-To install directory from GitHub:
+To install directly from GitHub:
 - Click Download ZIP from the Code submenu
 - Rename the zip file from Lorti-UI-TBC-master.zip to Lorti-UI-TBC.zip
 - Unzip to {WoW directory}/Interface/AddOns/Lorti-UI-TBC
