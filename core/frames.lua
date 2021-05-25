@@ -258,7 +258,7 @@ end
 local function OnEvent(self, event, addon)
     if addon == "Blizzard_TimeManager" then
         TimeManagerClockButton:GetRegions():SetVertexColor(.05, .05, .05)
-		StopwatchFrame:GetRegions():SetVertexColor(.35, .35, .35)
+		StopwatchFrame:GetRegions():SetVertexColor(.05, .05, .05)
 		StopwatchTabFrame:GetRegions():SetVertexColor(.35, .35, .35)
 
         self:UnregisterEvent(event)
