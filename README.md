@@ -9,7 +9,7 @@ Original addon: https://www.curseforge.com/wow/addons/lorti_ui
 Discord: Sinope#2833
 Twitch: SinopeTV
 
-Downloadable directly from the CurseForge desktop application and https://www.curseforge.com/wow/addons/lorti-ui-tbc.
+Downloadable directly from the CurseForge desktop application or https://www.curseforge.com/wow/addons/lorti-ui-tbc.
 
 To install directly from GitHub:
 - Click Download ZIP from the Code submenu
