@@ -149,6 +149,7 @@
 		if not (IsAddOnLoaded("Shadowed Unit Frames")
 				or IsAddOnLoaded("PitBull Unit Frames 4.0")
 				or IsAddOnLoaded("X-Perl UnitFrames")) then
+			
             for i, v in pairs({
 				PlayerFrameTexture,
 				PlayerFrameAlternateManaBarBorder,
@@ -167,8 +168,10 @@
 				PartyMemberFrame3PetFrameTexture,
 				PartyMemberFrame4PetFrameTexture,
    				TargetFrameToTTextureFrameTexture,
+				FocusFrameToTTextureFrameTexture,
 				CastingBarFrame.Border,
 				TargetFrameSpellBar.Border,
+				FocusFrameSpellBar.Border,
         		MirrorTimer1Border,
         		MirrorTimer2Border,
         		MirrorTimer3Border,
@@ -204,6 +207,7 @@
 			for i, v in pairs({
 				PlayerPVPIcon,
 				TargetFrameTextureFramePVPIcon,
+				-- FocusFrameTextureFramePVPIcon
 			}) do
 				v:SetAlpha(0.35)
 			end
