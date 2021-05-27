@@ -105,6 +105,7 @@
 					end
 				end
 			end
+
 			for m = 1, 5 do
 				local frame = _G["CompactRaidGroup"..g.."Member"..m]
 				if frame then
@@ -126,6 +127,7 @@
 				end
 			end
 		end
+
 		for _, region in pairs({CompactRaidFrameContainerBorderFrame:GetRegions()}) do
 			if region:IsObjectType("Texture") then
 				region:SetVertexColor(.05, .05, .05)
@@ -144,8 +146,11 @@
 			end
 		end)
 		if event == "GROUP_ROSTER_UPDATE" then return end
-		if not (IsAddOnLoaded("Shadowed Unit Frames") or IsAddOnLoaded("PitBull Unit Frames 4.0") or IsAddOnLoaded("X-Perl UnitFrames")) then
-                	for i,v in pairs({
+		if not (IsAddOnLoaded("Shadowed Unit Frames")
+				or IsAddOnLoaded("PitBull Unit Frames 4.0")
+				or IsAddOnLoaded("X-Perl UnitFrames")) then
+			
+            for i, v in pairs({
 				PlayerFrameTexture,
 				PlayerFrameAlternateManaBarBorder,
 				PlayerFrameAlternateManaBarLeftBorder,
@@ -163,27 +168,29 @@
 				PartyMemberFrame3PetFrameTexture,
 				PartyMemberFrame4PetFrameTexture,
    				TargetFrameToTTextureFrameTexture,
+				FocusFrameToTTextureFrameTexture,
 				CastingBarFrame.Border,
 				TargetFrameSpellBar.Border,
-        MirrorTimer1Border,
-        MirrorTimer2Border,
-        MirrorTimer3Border,
-
+				FocusFrameSpellBar.Border,
+        		MirrorTimer1Border,
+        		MirrorTimer2Border,
+        		MirrorTimer3Border,
 			}) do
-                 		v:SetVertexColor(.05, .05, .05)
+                v:SetVertexColor(.05, .05, .05)
 			end
-
 
 			for _, region in pairs({CompactRaidFrameManager:GetRegions()}) do
 				if region:IsObjectType("Texture") then
 					region:SetVertexColor(.05, .05, .05)
 				end
 			end
+
 			for _, region in pairs({CompactRaidFrameManagerContainerResizeFrame:GetRegions()}) do
 				if region:GetName():find("Border") then
 					region:SetVertexColor(.05, .05, .05)
 				end
 			end
+
 			CompactRaidFrameManagerToggleButton:SetNormalTexture("Interface\\AddOns\\Lorti-UI-TBC\\textures\\raid\\RaidPanel-Toggle")
 
 			hooksecurefunc("GameTooltip_ShowCompareItem", function(self, anchorFrame)
@@ -194,34 +201,35 @@
 				end
 			end)
 
-
 			GameTooltip:SetBackdropBorderColor(.05, .05, .05)
 			GameTooltip.SetBackdropBorderColor = function() end
 
-			for i,v in pairs({
+			for i, v in pairs({
 				PlayerPVPIcon,
 				TargetFrameTextureFramePVPIcon,
+				-- FocusFrameTextureFramePVPIcon
 			}) do
 				v:SetAlpha(0.35)
 			end
-			for i=1,4 do
+
+			for i=1, 4 do
 				_G["PartyMemberFrame"..i.."PVPIcon"]:SetAlpha(0)
 				_G["PartyMemberFrame"..i.."NotPresentIcon"]:Hide()
 				_G["PartyMemberFrame"..i.."NotPresentIcon"].Show = function() end
 			end
+
 			PlayerFrameGroupIndicator:SetAlpha(0)
 			PlayerHitIndicator:SetText(nil)
 			PlayerHitIndicator.SetText = function() end
 			PetHitIndicator:SetText(nil)
 			PetHitIndicator.SetText = function() end
-
 		else
-			CastingBarFrameBorder:SetVertexColor(.05,.05,.05)
+			CastingBarFrameBorder:SetVertexColor(.05, .05, .05)
 		end
 	end)
 
  -- COLORING THE MAIN BAR
-for i,v in pairs({
+for i, v in pairs({
     SlidingActionBarTexture0,
     SlidingActionBarTexture1,
     MainMenuBarTexture0,
@@ -246,7 +254,7 @@ for i,v in pairs({
 end
 
 if IsAddOnLoaded("BattleForAzerothUI") then
-    for i,v in pairs({
+    for i, v in pairs({
         ActionBarArtSmallTexture,
         MicroMenuArtTexture,
     }) do
@@ -254,15 +262,44 @@ if IsAddOnLoaded("BattleForAzerothUI") then
     end
 end
 
---RECOLOR CLOCK AND STOPWATCH
 local function OnEvent(self, event, addon)
+
+	-- RECOLOR CLOCK and STOPWATCH Frames
     if addon == "Blizzard_TimeManager" then
         TimeManagerClockButton:GetRegions():SetVertexColor(.05, .05, .05)
 		StopwatchFrame:GetRegions():SetVertexColor(.05, .05, .05)
 		StopwatchTabFrame:GetRegions():SetVertexColor(.35, .35, .35)
 
-        self:UnregisterEvent(event)
+		local a, b, c, d, e, f, g, h, i, j, k, l, n, o, p, q, r =  TimeManagerFrame:GetRegions()
+		for _, v in pairs({a, b, c, d, e, f, g, h, i, j, k, l, n, o, p, q, r}) do
+			v:SetVertexColor(.35, .35, .35)
+		end
     end
+
+	-- RECOLOR TALENTS Frame
+	if addon == "Blizzard_TalentUI" then
+		local _, a, b, c, d, _, _, _, _, _, e, f, g = PlayerTalentFrame:GetRegions()
+
+		for _, v in pairs({a, b, c, d, e, f, g}) do
+			v:SetVertexColor(.35, .35, .35)
+		end
+    end
+
+	-- RECOLOR TRADESKILL Frame
+	if addon == "Blizzard_TradeSkillUI" then
+		local _, a, b, c, d, _, e, f, g, h = TradeSkillFrame:GetRegions()
+
+		for _, v in pairs({ a, b, c, d, e, f, g, h})do
+			v:SetVertexColor(.35, .35, .35)
+		end
+    end
+
+	-- Unregister when finished recoloring.
+	if (IsAddOnLoaded("Blizzard_TalentUI")
+			and IsAddOnLoaded("Blizzard_TimeManager")
+			and IsAddOnLoaded("Blizzard_TradeSkillUI")) then
+		self:UnregisterEvent(event)
+	end
 end
 
 local f = CreateFrame("Frame")
@@ -270,18 +307,18 @@ f:RegisterEvent("ADDON_LOADED")
 f:SetScript("OnEvent", OnEvent)
 
  -- RECOLOR GRYPHONS
-for i,v in pairs({
+for i, v in pairs({
     MainMenuBarLeftEndCap,
     MainMenuBarRightEndCap,
     StanceBarLeft,
     StanceBarMiddle,
-	StanceBarRight,
+	StanceBarRight
 }) do
    v:SetVertexColor(.35, .35, .35)
 end
 
  -- RECOLOR MINIMAP
-for i,v in pairs({
+for i, v in pairs({
 	MinimapBorder,
 	MinimapBorderTop,
 	MiniMapMailBorder,
@@ -290,8 +327,8 @@ for i,v in pairs({
    v:SetVertexColor(.05, .05, .05)
 end
 
-for i,v in pairs({
---LOOT FRAME
+for i, v in pairs({
+	--LOOT FRAME
     LootFrameBg,
 	LootFrameRightBorder,
     LootFrameLeftBorder,
@@ -310,7 +347,7 @@ for i,v in pairs({
     LootFrameInsetInsetTopBorder,
     LootFrameInsetInsetBottomBorder,
 	LootFramePortraitFrame,
---EACH BAG
+	--EACH BAG
 	ContainerFrame1BackgroundTop,
 	ContainerFrame1BackgroundMiddle1,
 	ContainerFrame1BackgroundBottom,
@@ -355,7 +392,7 @@ for i,v in pairs({
 	ContainerFrame11BackgroundMiddle1,
 	ContainerFrame11BackgroundBottom,
 
---Frames that's not colored for some reason
+	-- Frames that's not colored for some reason
 	MerchantFrameTopBorder,
 	MerchantFrameBtnCornerRight,
 	MerchantFrameBtnCornerLeft,
@@ -367,14 +404,14 @@ for i,v in pairs({
    v:SetVertexColor(.35, .35, .35)
 end
 
---BANK
+-- BANK
 local a, b, c, d, _, e = BankFrame:GetRegions()
 for _, v in pairs({a, b, c, d, e}) do
    v:SetVertexColor(.35, .35, .35)
 end
 
 --Darker color stuff
-for i,v in pairs({
+for i, v in pairs({
     LootFrameInsetBg,
     LootFrameTitleBg,
 	MerchantFrameTitleBg,
@@ -388,7 +425,7 @@ for _, v in pairs({a, b, c, d, e}) do
    v:SetVertexColor(.35, .35, .35)
 end
 
---Spellbook
+-- Spellbook Frame
 local _, a, b, c, d = SpellBookFrame:GetRegions()
 for _, v in pairs({a, b, c, d}) do
 	v:SetVertexColor(.35, .35, .35)
@@ -402,13 +439,13 @@ end
 for _, v in pairs({ReputationDetailCorner, ReputationDetailDivider}) do
     v:SetVertexColor(.35, .35, .35)
 end
---Reputation Frame
+-- Reputation Frame
 local a, b, c, d = ReputationFrame:GetRegions()
 for _, v in pairs({a, b, c, d}) do
     v:SetVertexColor(.35, .35, .35)
 end
 
--- HONOR
+-- HONOR Frame
 local a, b, c, d = PVPFrame:GetRegions()
 for _, v in pairs({a, b, c, d}) do
 	v:SetVertexColor(.35, .35, .35)
@@ -420,7 +457,7 @@ for _, v in pairs({a, b, c ,d, e, f, g, h, j, k}) do
 	v:SetVertexColor(.35, .35, .35)
 end
 --MerchantPortrait
-for i,v in pairs({
+for i, v in pairs({
     MerchantFramePortrait
 }) do
    v:SetVertexColor(1, 1, 1)
@@ -445,11 +482,35 @@ SpellBookFrame.Material:SetHeight(541)
 SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
 SpellBookFrame.Material:SetVertexColor(.5, .5, .5)
 
- --THINGS THAT SHOULD REMAIN THE REGULAR COLOR
-for i,v in pairs({
+-- Social Frame
+local a, b, c, d, e, f, g, _, i, j, k, l, n, o, p, q, r, _, _ = FriendsFrame:GetRegions()
+for _, v in pairs({
+	a, b, c, d, e, f, g, h, i, j, k, l, n, o, p, q, r,
+	FriendsFrameInset:GetRegions(),
+	WhoFrameListInset:GetRegions()
+}) do
+	v:SetVertexColor(.35, .35, .35)
+end
+
+-- Quest Log Frame
+local _, _, a, b, c, d = QuestLogFrame:GetRegions()
+for _, v in pairs({a, b, c, d}) do
+	v:SetVertexColor(.35, .35, .35)
+end
+ 
+QuestLogFrame.Material = QuestLogFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
+QuestLogFrame.Material:SetTexture[[Interface\AddOns\Lorti-UI-TBC\textures\quest\QuestBG.tga]]
+QuestLogFrame.Material:SetWidth(514)
+QuestLogFrame.Material:SetHeight(400)
+QuestLogFrame.Material:SetPoint('TOPLEFT', QuestLogDetailScrollFrame, 0, 0)
+QuestLogFrame.Material:SetVertexColor(.7, .7, .7)
+
+-- THINGS THAT SHOULD REMAIN THE REGULAR COLOR
+for i, v in pairs({
 	BankPortraitTexture,
 	BankFrameTitleText,
 	MerchantFramePortrait,
+	WhoFrameTotals
 }) do
    v:SetVertexColor(1, 1, 1)
 end
