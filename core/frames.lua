@@ -488,7 +488,20 @@ for _, v in pairs({
 	v:SetVertexColor(.35, .35, .35)
 end
 
- -- THINGS THAT SHOULD REMAIN THE REGULAR COLOR
+-- Quest Log Frame
+local _, _, a, b, c, d = QuestLogFrame:GetRegions()
+for _, v in pairs({a, b, c, d}) do
+	v:SetVertexColor(.35, .35, .35)
+end
+ 
+QuestLogFrame.Material = QuestLogFrame:CreateTexture(nil, 'OVERLAY', nil, 7)
+QuestLogFrame.Material:SetTexture[[Interface\AddOns\Lorti-UI-TBC\textures\quest\QuestBG.tga]]
+QuestLogFrame.Material:SetWidth(514)
+QuestLogFrame.Material:SetHeight(400)
+QuestLogFrame.Material:SetPoint('TOPLEFT', QuestLogDetailScrollFrame, 0, 0)
+QuestLogFrame.Material:SetVertexColor(.7, .7, .7)
+
+-- THINGS THAT SHOULD REMAIN THE REGULAR COLOR
 for i, v in pairs({
 	BankPortraitTexture,
 	BankFrameTitleText,
