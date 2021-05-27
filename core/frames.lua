@@ -261,6 +261,11 @@ local function OnEvent(self, event, addon)
 		StopwatchFrame:GetRegions():SetVertexColor(.05, .05, .05)
 		StopwatchTabFrame:GetRegions():SetVertexColor(.35, .35, .35)
 
+		local a, b, c, d, e, f, g, h, i, j, k, l, n, o, p, q, r =  TimeManagerFrame:GetRegions()
+		for _, v in pairs({a, b, c, d, e, f, g, h, i, j, k, l, n, o, p, q, r}) do
+			v:SetVertexColor(.35, .35, .35)
+		end
+
         self:UnregisterEvent(event)
     end
 end
