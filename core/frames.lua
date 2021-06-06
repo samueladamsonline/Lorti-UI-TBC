@@ -480,7 +480,7 @@ SpellBookFrame.Material:SetTexture[[Interface\AddOns\Lorti-UI-TBC\textures\quest
 SpellBookFrame.Material:SetWidth(547)
 SpellBookFrame.Material:SetHeight(541)
 SpellBookFrame.Material:SetPoint('TOPLEFT', SpellBookFrame, 22, -74)
-SpellBookFrame.Material:SetVertexColor(.5, .5, .5)
+SpellBookFrame.Material:SetVertexColor(.7, .7, .7)
 
 -- Social Frame
 local a, b, c, d, e, f, g, _, i, j, k, l, n, o, p, q, r, _, _ = FriendsFrame:GetRegions()
