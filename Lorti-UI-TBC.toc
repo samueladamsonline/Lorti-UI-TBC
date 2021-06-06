@@ -1,6 +1,6 @@
 ## Interface: 20501
 ## Author: Lorti, Chordsy, Sinope
-## Version: 2.0.2
+## Version: 2.0.3
 ## Title: Lorti UI (Burning Crusade Classic)
 ## Notes: Darkens the default UI. Updated for Burning Crusade Classic.
 
