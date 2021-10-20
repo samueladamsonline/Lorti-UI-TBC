@@ -17,3 +17,7 @@ To install directly from GitHub:
 - Unzip to {WoW directory}/Interface/AddOns/Lorti-UI-TBC
 
 Make sure you haven't accidently nested folders. Files such as config.lua and README.md should be located at {WoW directory}/Interface/AddOns/Lorti-UI-TBC/config.lua and {WoW directory}/Interface/AddOns/Lorti-UI-TBC/README.md respectively.
+
+# Future Roadmap
+
+This addon is no longer in active development as I've quit the game. If you're interested in taking over the project, send me a message via Discord to discuss.
